@@ -19,6 +19,7 @@
       },
       "id": "ID",
       "countryName": "Country Name",
+      "countryAreaCode": "Country Area Code",
       "region": "Region",
       "location": "Location"
     }

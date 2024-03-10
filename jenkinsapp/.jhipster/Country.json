@@ -8,6 +8,10 @@
     {
       "fieldName": "countryName",
       "fieldType": "String"
+    },
+    {
+      "fieldName": "countryAreaCode",
+      "fieldType": "String"
     }
   ],
   "name": "Country",

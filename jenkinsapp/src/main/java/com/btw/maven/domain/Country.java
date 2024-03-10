@@ -26,6 +26,9 @@ public class Country implements Serializable {
     @Column(name = "country_name")
     private String countryName;
 
+    @Column(name = "country_area_code")
+    private String countryAreaCode;
+
     @JsonIgnoreProperties(value = { "country" }, allowSetters = true)
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(unique = true)
@@ -61,6 +64,19 @@ public class Country implements Serializable {
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
+    }
+
+    public String getCountryAreaCode() {
+        return this.countryAreaCode;
+    }
+
+    public Country countryAreaCode(String countryAreaCode) {
+        this.setCountryAreaCode(countryAreaCode);
+        return this;
+    }
+
+    public void setCountryAreaCode(String countryAreaCode) {
+        this.countryAreaCode = countryAreaCode;
     }
 
     public Region getRegion() {
@@ -120,6 +136,7 @@ public class Country implements Serializable {
         return "Country{" +
             "id=" + getId() +
             ", countryName='" + getCountryName() + "'" +
+            ", countryAreaCode='" + getCountryAreaCode() + "'" +
             "}";
     }
 }
